@@ -1,1 +1,1 @@
-alert('Welcome to fake news detection!');
+// alert('Welcome to fake news detection!');
