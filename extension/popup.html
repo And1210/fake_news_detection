@@ -2,18 +2,25 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
   </head>
 
   <body>
     <div class="container">
       <div class="row">
-        <h4>Fake News Detection</h4>
+        <div class="col-12" style="padding-left: 35px; padding-top: 20px;">
+          <h4 class="mont">Fake News Detector</h4>
+        </div>
       </div>
       <div class="row">
-        <textarea name="data" rows="8" cols="60" style="margin: 20px;"></textarea>
+        <div class="col-12">
+          <textarea name="data" rows="8" cols="60" class="clean-textarea"></textarea>
+        </div>
       </div>
-      <div class="row" align="center">
-        <button>Detect</button>
+      <div class="row">
+        <div class="col-12" align="center" style="padding-bottom: 20px;">
+          <button class="mont clean-button">Detect</button>
+        </div>
       </div>
     </div>
   </body>

@@ -1,0 +1,22 @@
+@font-face {
+  font-family: montserrat;
+  src: url(font/Montserrat-Light.ttf);
+}
+
+.mont {
+  font-family: montserrat
+}
+
+.clean-button {
+  border-radius: 10px;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 5px;
+}
+
+.clean-textarea {
+  margin-left: 20px;
+  margin-right: 20px;
+}
