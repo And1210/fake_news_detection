@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
   </head>
 
   <body>
@@ -14,14 +15,17 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <textarea name="data" rows="8" cols="60" class="clean-textarea"></textarea>
+          <textarea name="data" id="data" rows="8" cols="60" class="clean-textarea"></textarea>
         </div>
       </div>
       <div class="row">
         <div class="col-12" align="center" style="padding-bottom: 20px;">
-          <button class="mont clean-button">Detect</button>
+          <button id="SendData" class="mont clean-button">Detect</button>
         </div>
       </div>
     </div>
   </body>
+
+
+  <script type="text/javascript" src="comms.js"></script>
 </html>
