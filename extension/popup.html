@@ -7,25 +7,64 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12" style="padding-left: 35px; padding-top: 20px;">
-          <h4 class="mont">Fake News Detector</h4>
+    <ul style="display: flex; width:100%; background-color: #1F2F2F; padding-top: 20px; padding-bottom: 10px; padding-left: 20px;" id="myTab" role="tablist">
+      <li><h4 class="mont"><b>Detectron</b></h4></li>
+      <li class="one-flex tablinks mont" id="input_li"><button id="input_button" class="tab-link">Input</a></li>
+      <li class="one-flex tablinks mont" id="output_li"><button id="output_button" class="tab-link">Output</a></li>
+    </ul>
+
+    <div id="input" class="tabcontent">
+      <div class="container" style="background-color: #2F4F4F;">
+        <div class="row">
+          <div class="col-12" style="padding-left: 35px; padding-top: 20px;">
+            <h6 class="mont" id="to_animate"></h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="mont" style="padding-left: 20px; padding-top: 10px;">Paste any article here:</div>
+            <textarea name="data" id="data" rows="8" cols="60" class="clean-textarea"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-2" align="center" style="padding-bottom: 20px;">
+            <button id="sendData" class="mont clean-button">Detect</button>
+          </div>
+          <div class="col-2" align="center" style="padding-bottom: 20px;">
+            <button id="clear" class="mont clean-button">Clear</button>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <textarea name="data" id="data" rows="8" cols="60" class="clean-textarea"></textarea>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12" align="center" style="padding-bottom: 20px;">
-          <button id="SendData" class="mont clean-button">Detect</button>
+    </div>
+
+    <div id="output" class="tabcontent">
+      <div class="container" style="background-color: #2F4F4F;">
+        <div class="row" style="width: 500px;">
+          <div class="col-6" align="center">
+            <svg class="progress-ring" height="240" width="240">
+              <circle class="progress-ring__circle" stroke="#4CAF50" stroke-width="20" fill="transparent" r="80" cx="120" cy="120" />
+            </svg>
+          </div>
+          <div class="col-6" style="padding-top: 20px;">
+            <div class="row"><div class="col-12">
+              <h4 class="output mont">The article you submitted has a</h4>
+            </div></div>
+            <div class="row"><div class="col-12" align="center">
+              <h1 class="percent mont" id="percent"></h1>
+            </div></div>
+            <div class="row"><div class="col-12">
+              <h4 class="output mont">chance of being FAKE NEWS!</h4>
+            </div></div>
+          </div>
         </div>
       </div>
     </div>
   </body>
 
 
+  <script type="text/javascript" src="output.js"></script>
   <script type="text/javascript" src="comms.js"></script>
+  <script type="text/javascript" src="animate.js"></script>
+  <script type="text/javascript" src="tab.js"></script>
 </html>
