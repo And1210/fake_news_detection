@@ -7,25 +7,34 @@ document.getElementById("data").addEventListener("keyup", (event) => {
   }
 });
 
-document.getElementById("sendData").addEventListener("click", sendData);
+document.getElementById("sendData").addEventListener("click", sendRequest);
 document.getElementById("clear").addEventListener("click", clear);
 
-function sendData() {
-  let data = $("#data")[0].value;
-
+function sendData(data) {
   $.ajax({
     type: "POST",
     url: API_URL,
     data: {'text': data},
     success: (res) => {
       console.log(`Success! ${res}`);
-      curVal = parseInt(res[15]+res[16]);
+      data = res.split(',');
+      if (data[0] == "0") { //is fake
+        curVal = Math.round(parseFloat(data[1]));
+      } else {
+        curVal = Math.round(100 - parseFloat(data[1]));
+      }
+      // curVal = parseInt(res[15]+res[16]);
       openTab("output");
     },
     error: (a, b, c) => {
       console.log(`Error: ${c}`);
     }
   });
+}
+
+function sendRequest() {
+  let data = $("#data")[0].value;
+  sendData(data);
 }
 
 function clear() {
