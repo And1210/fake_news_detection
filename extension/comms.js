@@ -23,11 +23,13 @@ function sendData(data) {
     	document.getElementById('loading').style.display = "none";
       console.log(`Success! ${res}`);
       data = res.split(',');
-      if (data[0] == "0") { //is fake
-        curVal = Math.round(parseFloat(data[1]));
-      } else {
-        curVal = Math.round(100 - parseFloat(data[1]));
-      }
+      curVal = Math.round(parseFloat(data[1]));
+      fake = (data[0] == "1");
+      // if (data[0] == "0") { //is fake
+      //   curVal = Math.round(parseFloat(data[1]));
+      // } else {
+      //   curVal = Math.round(100 - parseFloat(data[1]));
+      // }
       // curVal = parseInt(res[15]+res[16]);
       openTab("output");
     },

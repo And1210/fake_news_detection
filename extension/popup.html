@@ -8,7 +8,7 @@
 
   <body>
     <ul style="display: flex; width:100%; background-color: #1F2F2F; padding-top: 20px; padding-bottom: 10px; padding-left: 20px;" id="myTab" role="tablist">
-      <li><h4 class="mont"><b>Detectron</b></h4></li>
+      <li><h4 class="mont"><b>NewsScan</b></h4></li>
       <li class="one-flex tablinks mont" id="input_li"><button id="input_button" class="tab-link">Input</a></li>
       <li class="one-flex tablinks mont" id="output_li"><button id="output_button" class="tab-link">Output</a></li>
     </ul>
@@ -54,13 +54,16 @@
           </div>
           <div class="col-6" style="padding-top: 20px;">
             <div class="row"><div class="col-12">
-              <h4 class="output mont">The article you submitted has a</h4>
+              <h4 class="output mont" id="result">This article is </h4>
+            </div></div>
+            <div class="row"><div class="col-12">
+              <h4 class="output mont">We are </h4>
             </div></div>
             <div class="row"><div class="col-12" align="center">
               <h1 class="percent mont" id="percent"></h1>
             </div></div>
             <div class="row"><div class="col-12">
-              <h4 class="output mont">chance of being FAKE NEWS!</h4>
+              <h4 class="output mont">confident!</h4>
             </div></div>
           </div>
         </div>
